@@ -24,7 +24,7 @@ export default async function NewAppointment({
             patientId={patient.$id}
           />
 
-          <p className="copyright mt-10">© 2024 CarePulse</p>
+          <p className="copyright mt-4">© 2024 CarePulse</p>
         </div>
       </section>
 

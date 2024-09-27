@@ -75,10 +75,12 @@ const AppointmentForm = ({
         };
         const appointment = await createAppointment(appointmentData);
 
+        console.log("hi", appointment);
+
         if (appointment) {
           form.reset();
           router.push(
-            `/patients/${userId}/new-appointment/sccuess?appointmentId=${appointment.id}`
+            `/patients/${userId}/new-appointment/success?appointmentId=${appointment.$id}`
           );
         }
       }
@@ -185,7 +187,7 @@ const AppointmentForm = ({
           isLoading={isLoading}
           className={`${
             type === "cancel" ? "shad-danger-btn" : " shad-primary-btn"
-          }, w-full`}
+          } w-full`}
         >
           {buttonLabel}
         </SubmitButton>
